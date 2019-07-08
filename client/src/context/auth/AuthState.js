@@ -28,7 +28,7 @@ const AuthState = props => {
 
   // Load User
   const loadUser = async () => {
-    if(localStorage.token) {
+    if (localStorage.token) {
       setAuthToken(localStorage.token);
     }
 
@@ -70,7 +70,7 @@ const AuthState = props => {
   };
 
   // Login User
-   const login = async formData => {
+  const login = async formData => {
     const config = {
       headers: {
         "Contet-Type": "application/json"
@@ -84,7 +84,7 @@ const AuthState = props => {
         type: LOGIN_SUCCESS,
         payload: res.data
       });
-      
+
       loadUser();
     } catch (err) {
       dispatch({
@@ -95,7 +95,7 @@ const AuthState = props => {
   };
 
   // Logout
-  const logout = () => console.log("Logout user");
+  const logout = () => dispatch({ type: LOGOUT });
 
   // Clear Errors
   const clearErrors = () => dispatch({ type: CLEAR_ERRORS });
