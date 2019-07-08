@@ -2,6 +2,7 @@ node_modules/
 /config/production.json
 
 /client/build
+/config/production.json
 
 .DS_Store
 /client/.env.local
