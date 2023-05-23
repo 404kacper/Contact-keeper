@@ -12,13 +12,12 @@ const Login = () => {
   const { login, error, clearErrors, isAuthenticated } = authContext;
 
   useEffect(() => {
-    if (error === 'User already exists') {
+    if (error === 'Invalid Credentials') {
       setAlert(error, 'danger');
       clearErrors();
     }
-
     // eslint-disable-next-line
-  }, [error, isAuthenticated, props.history]);
+  }, [error, isAuthenticated, setAlert]);
 
   const [user, setUser] = useState({
     email: '',
@@ -49,6 +48,7 @@ const Login = () => {
         <div className='form-group'>
           <label htmlFor='email'>Email Address</label>
           <input
+            id='email'
             type='email'
             name='email'
             value={email}
@@ -59,6 +59,7 @@ const Login = () => {
         <div className='form-group'>
           <label htmlFor='password'>Password</label>
           <input
+            id='password'
             type='password'
             name='password'
             value={password}
