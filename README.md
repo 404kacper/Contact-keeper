@@ -1,4 +1,4 @@
-#  Online version of this app can be found on Heroku:
+#  Live version of this app can be found on Heroku:
 
 ###### Description: 
 
