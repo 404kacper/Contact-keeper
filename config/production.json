@@ -1,5 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://brad123:brad123@initialcluster-iw81t.gcp.mongodb.net/test?retryWrites=true&w=majority",
-    "jwtSecret": "secret"
-  }
-  
+  "mongoURI": "mongodb+srv://kacper123:RodzIbJ6mxryprxk@cluster0.xrlcunm.mongodb.net/?retryWrites=true&w=majority",
+  "jwtSecret": "secret"
+}
