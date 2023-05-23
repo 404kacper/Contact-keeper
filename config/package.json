@@ -1,0 +1,12 @@
+{
+  "name": "config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "db.js",
+  "scripts": {},
+  "author": "404kacper",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.9"
+  }
+}
