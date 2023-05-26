@@ -1,6 +1,6 @@
 # Live version of this app can be found on netlify - website link of this repo.
 
-###### Description:
+## Description:
 
 This is a full stack MERN app kept in monolith structure - with the purpose of serving as a digital address book.
 
