@@ -1,5 +1,4 @@
 {
   "mongoURI": "mongodb+srv://kacper123:RodzIbJ6mxryprxk@cluster0.xrlcunm.mongodb.net/?retryWrites=true&w=majority",
-  "backendURL": "https://contact-keeper-server-g9bo.onrender.com",
   "jwtSecret": "secret"
 }

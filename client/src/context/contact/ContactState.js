@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import axios from "axios";
+import api from "../../utils/axiosProductionInterface";
 import ContactContext from "./contactContext";
 import contactReducer from "./contactReducer";
 import {
@@ -28,7 +28,7 @@ const ContactState = props => {
   // Get Contacts
   const getContacts = async () => {
     try {
-      const res = await axios.get("/api/contacts");
+      const res = await api.get("/api/contacts");
 
       dispatch({
         type: GET_CONTACTS,
@@ -51,7 +51,7 @@ const ContactState = props => {
     };
 
     try {
-      const res = await axios.post("/api/contacts", contact, config);
+      const res = await api.post("/api/contacts", contact, config);
 
       dispatch({
         type: ADD_CONTACT,
@@ -68,7 +68,7 @@ const ContactState = props => {
   // Delete Contact
   const deleteContact = async id => {
     try {
-      await axios.delete(`/api/contacts/${id}`);
+      await api.delete(`/api/contacts/${id}`);
 
       dispatch({
         type: DELETE_CONTACT,
@@ -91,7 +91,7 @@ const ContactState = props => {
     };
 
     try {
-      const res = await axios.put(
+      const res = await api.put(
         `/api/contacts/${contact._id}`,
         contact,
         config
