@@ -9,8 +9,9 @@
     "client": "npm start --prefix ./client",
     "client-install": "npm install --prefix ./client",
     "server-install": "npm install --prefix ./server",
+    "config-install": "npm install --prefix ./config",
     "root-install": "npm install",
-    "build-server": "npm run root-install && npm run server-install",
+    "build-server": "npm run root-install && npm run config-install && npm run server-install",
     "dev": "concurrently \"npm run devserver \" \"npm run client\""
   },
   "repository": {
