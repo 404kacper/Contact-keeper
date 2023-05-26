@@ -14,6 +14,7 @@ const corsOptions = {
 };
 app.use(express.json({ extended: false }));
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions)); // enable pre-flight request for all routes
 
 // Define Routes
 
@@ -25,6 +26,7 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
+  console.log(`Frontend URL for cors is: ${config.get('frontendURL')}`);
   if (process.env.NODE_ENV == 'production') {
     console.log(
       `NODE_ENV is set to: ${process.env.NODE_ENV} using production package.`
