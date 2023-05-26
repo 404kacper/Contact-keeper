@@ -1,0 +1,2 @@
+# Redirects all refresh attempts to index.html where routing is handled
+/* /index.html
