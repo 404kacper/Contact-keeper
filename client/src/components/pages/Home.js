@@ -6,7 +6,7 @@ import ContactFilter from '../contacts/ContactFilter';
 const Home = () => {
   useEffect(() => {
     console.log('Process env is: ' + process.env);
-    console.log('Set env variable is:' + proccess.env.REACT_APP_BACKEND_URL);
+    console.log('Set env variable is:' + process.env.REACT_APP_BACKEND_URL);
   }, []);
 
   return (
