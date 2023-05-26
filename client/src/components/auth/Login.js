@@ -19,6 +19,11 @@ const Login = () => {
     // eslint-disable-next-line
   }, [error, isAuthenticated, setAlert]);
 
+  useEffect(() => {
+    console.log('Process env is: ' + process.env);
+    console.log('Set env variable is:' + process.env.REACT_APP_BACKEND_URL);
+  }, []);
+
   const [user, setUser] = useState({
     email: '',
     password: '',
