@@ -22,7 +22,7 @@ const Login = () => {
   useEffect(() => {
     console.log('Process env is: ');
     console.log(process.env);
-    if (process.env === 'production') {
+    if (process.env.NODE_ENV === 'production') {
       console.log('Running in production environment.');
     } else {
       console.log('Running in dev environment.');
