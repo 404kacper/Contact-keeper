@@ -7,8 +7,11 @@
     "start": "node ./server/server.js",
     "server": "nodemon ./server/server.js",
     "client": "npm start --prefix ./client",
-    "clientinstall": "npm install --prefix ./client",
-    "dev": "concurrently \"npm run server \" \"npm run client\""
+    "client-install": "npm install --prefix ./client",
+    "server-install": "npm install --prefix ./server",
+    "root-install": "npm install",
+    "build": "npm run server-install && npm run client-install && npm run root-install && npm run build --prefix ./client",
+    "dev": "concurrently \"npm run devserver \" \"npm run client\""
   },
   "repository": {
     "type": "git",
