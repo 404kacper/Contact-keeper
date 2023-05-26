@@ -1,2 +1,2 @@
 # Redirects all refresh attempts to home where routing is handled - so that netlify doesn't show page not found
-/* /
+/* /login
