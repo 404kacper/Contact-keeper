@@ -12,7 +12,7 @@
     "config-install": "npm install --prefix ./config",
     "root-install": "npm install",
     "build-server": "npm run root-install && npm run config-install && npm run server-install",
-    "dev": "concurrently \"npm run devserver \" \"npm run client\""
+    "dev": "concurrently \"npm run server \" \"npm run client\""
   },
   "repository": {
     "type": "git",
