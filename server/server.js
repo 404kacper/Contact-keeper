@@ -14,7 +14,9 @@ const corsOptions = {
 };
 app.use(express.json({ extended: false }));
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions)); // enable pre-flight request for all routes
+
+// enable pre-flight request for all routes
+app.options('*', cors(corsOptions)); 
 
 // Define Routes
 
