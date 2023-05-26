@@ -1,5 +1,6 @@
 const express = require('express');
 const connectDB = require('../config/db');
+const config = require('../config/node_modules/config');
 
 const app = express();
 
@@ -7,7 +8,11 @@ const app = express();
 connectDB();
 
 // Init Middleware
+const corsOptions = {
+  origin: config.get('frontendURL'),
+};
 app.use(express.json({ extended: false }));
+app.use(cors(corsOptions));
 
 // Define Routes
 
