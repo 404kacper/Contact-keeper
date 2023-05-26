@@ -20,7 +20,13 @@ const Login = () => {
   }, [error, isAuthenticated, setAlert]);
 
   useEffect(() => {
-    console.log('Process env is: ' + process.env);
+    console.log('Process env is: ');
+    console.log(process.env);
+    if (process.env === 'production') {
+      console.log('Running in production environment.');
+    } else {
+      console.log('Running in dev environment.');
+    }
     console.log('Set env variable is:' + process.env.REACT_APP_BACKEND_URL);
   }, []);
 
