@@ -11,7 +11,7 @@ import {
   CLEAR_CONTACTS
 } from "../types";
 
-export default (state, action) => {
+const contactRedcuer = (state, action) => {
   switch (action.type) {
     case GET_CONTACTS:
       return {
@@ -82,3 +82,5 @@ export default (state, action) => {
       return state;
   }
 };
+
+export default contactRedcuer;
