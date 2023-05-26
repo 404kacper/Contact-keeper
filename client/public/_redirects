@@ -1,2 +1,2 @@
-# Redirects all refresh attempts to index.html where routing is handled
-/* /index.html
+# Redirects all refresh attempts to home where routing is handled - so that netlify doesn't show page not found
+/* /
